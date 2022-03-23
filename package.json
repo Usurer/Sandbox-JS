@@ -2,11 +2,12 @@
   "name": "LearningJS",
   "version": "0.0.1",
   "description": "Just a bunch of folders that contain my JS experiments and excercises",
-  "main": "index.js",
   "author": "Usurer",
   "license": "MIT",
   "devDependencies": {
-    "http-server": "^14.1.0"
+    "http-server": "^14.1.0",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
   },
   "dependencies": {
     "rxjs": "^7.5.5"
