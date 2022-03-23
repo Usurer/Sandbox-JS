@@ -1,5 +1,6 @@
 ### Setup Webpack
 
+#### Just dumb setup
 Initially I've moved all the code into an `src` folder.
 Next I run 
 ```
@@ -28,3 +29,8 @@ of$.subscribe({
 
 But the resulting file is huge - 106 Kb. Looks like it's the "shotgun" import from RxJs that does it - WP just imports everything.
 Now let's import only one function: `import { of } from 'rxjs';`. Aaaand... nothing changes :( Could it be because of development mode? IDK. That's something to research, but now let's put it aside and deal with the entry points.
+
+
+#### Use index.html as an entry point
+
+To do this we need to install HtmlWebpackPlugin. Now we need the webpack config, since things are becoming complicated.
