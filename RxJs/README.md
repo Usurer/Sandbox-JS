@@ -34,3 +34,16 @@ Now let's import only one function: `import { of } from 'rxjs';`. Aaaand... noth
 #### Use index.html as an entry point
 
 To do this we need to install HtmlWebpackPlugin. Now we need the webpack config, since things are becoming complicated.
+
+Now mind that since I have this particular project as a subfolder of an actual project (and it's not set up as a monorepo), I have to deal with different paths and stuff. So now my script looks like
+
+``` bash
+/Sandbox/JS
+$ yarn webpack --config RxJs/webpack.config.js --mode development
+```
+
+Now we can `yarn http-server` and go to http://127.0.0.1:8080/RxJs/dist/ to see results.
+Aaaand... it kinda sucks, because the main.js is still an entry point and index.html is totally regenerated, so that HTML i put in body disappears o_O 
+Actually it seems that HtmlWebpackPlugin doesn't even need an index.html and will generate one instead.
+
+What we can do is to set a `template` for HtmlWebpackPlugin - it can be a html file, and plugin will just inject a resulting js bundle into it's `head`
