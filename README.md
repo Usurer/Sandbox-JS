@@ -1,0 +1,2 @@
+This repo contains a bunch of excercises I do to learn some frontend basics I never had time to properly investigate.
+Most probably there will be very basic things, like js modules, webpack configs, experiments with observables, TypeScript and JS itself.
